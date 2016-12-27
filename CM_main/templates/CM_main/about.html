@@ -1,0 +1,20 @@
+{% extends "CM_main/base.html" %}
+
+{% load staticfiles %}
+
+{% block title %}
+  About Us
+{% endblock %}
+
+{% block content %}
+<p>The media is a dangerous weapon. It shapes public opinion and with enough propaganda, biased media can rewrite history with enough propaganda. Fair coverage requires conveying incidents as they unfold. The notion of neutral media is a myth, but we can try to get close by reporting incidents rather than political opinions or stances.</p>
+
+<p>Since the military coup in Egypt any opposing voice has been shut down. The anti coup movement has relied on social media, citizen journalism and decentralized coverage to report news and events. The coup relies on government and privately owned TV stations and journals to spread their own propaganda. Each side of the propaganda war has been trying to amplify news that will be in their favour. As a result of this it is hard for the audience to be well informed about the latest developments taking place on the ground in Egypt. News reports are usually either exaggerated or understated.</p>
+
+<p>Now here is the problem: Who will write Egypt’s post-coup history? Will it remain distorted? Or will parts of the truth remain scattered ?</p>
+
+<img src="{% static 'dist/img/protest-sample-1.png' %}" alt="Protest sample" />
+
+<p>To address this problem, Coup Monitor was created. Coup monitor is a brand new initiative that attempts to document events in Egypt after the military coup. We collect data and present them as is. However, raw data is not only unappealing to others many but also, very difficult to analyze. That's why we generate visualizations that summarize the underlying patterns in this data. These infographics will help the audience understand the presented data. Coup Monitor - Less politics. more infographics.</p>
+
+{% endblock %}

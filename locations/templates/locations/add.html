@@ -1,0 +1,60 @@
+{% extends "CM_main/base.html" %}
+
+{% load bootstrap3 %}
+    {{formar.media.css}}
+{% block stylesheets %}
+     
+{% endblock %}
+
+{% block scripts %}
+    {{formar.media.js}}
+{% endblock %} 
+
+
+{% block content %}
+<!--
+<form method=post action="">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <input type=submit class=btn />
+</form>
+-->
+
+<section class="content">
+
+  <div class=row>
+      <div class="box box-info" > 
+        <div class="box-header with-border">
+          <h1 class="text-center">Add a new location 
+             | <span class=""> أضف موقع جديد</span>
+          </h1>
+        </div>
+        <div class="box-body">
+          <div class="row">
+            <form method=post action="" >
+              <!-- Engilsh form -->
+              <div class="col-xs-6">
+                  {% csrf_token %}
+                  {% bootstrap_form formen %}
+              </div>
+  
+              <!-- Arabic form -->
+              <div class="col-xs-6 text-right">
+                  {% csrf_token %}
+                  {% bootstrap_form formar %}
+              </div>
+            </div>
+
+
+            {% buttons %}
+            <button type="submit" class="btn btn-primary btn-block">
+            {% bootstrap_icon "star" %} Submit
+            </button>
+            {% endbuttons %}
+
+          </form>
+        </div>
+      </div>
+  </div>
+
+{% endblock %}

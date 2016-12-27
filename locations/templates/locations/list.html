@@ -1,0 +1,53 @@
+{% extends "CM_main/base.html" %}
+
+{% block title %} Locations {% endblock %}
+{% block content %}
+  <div class ="row">
+    <div class="col-xs-12">
+      <div class="box">
+	<!--Display the results -->
+	<table class="table table-bordered table-hover">
+	  <thead>
+	    <tr>
+	      <th>Area</th>
+	      <th>Governorate</th>
+	      <th>Latitude</th>
+	      <th>Longitude</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	  {% for loc in locations %}
+	    <tr>
+	      <td>{{ loc.name }}</td>
+	      <td>{{ loc.governorate }}</td>
+	      <td>{{ loc.lat }}</td>
+	      <td>{{ loc.lon }}</td>
+	    </tr>
+	  {% endfor %}
+	  </tbody>
+	</table>
+
+	<!-- pagination -->
+	<div class="pagination">
+	  <span class="step-links">
+	    {% if locations.has_previous %}
+	      <a href="?page={{ locations.previous_page_number }}">previous</a>
+	    {% endif %}
+	  </span>
+	  
+
+	  <span class="current">
+	    Page {{ locations.number}} of {{ locations.paginator.num_pages }}.
+	  </span>
+
+	  {% if locations.has_next %}
+	    <a href="?page={{ locations.next_page_number }}">next</a>
+	  {% endif %}
+
+	</div>
+      </table>
+    </div>
+  </div>
+</div>
+      
+{% endblock %}

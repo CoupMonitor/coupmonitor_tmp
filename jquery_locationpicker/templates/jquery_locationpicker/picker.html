@@ -1,0 +1,13 @@
+
+
+
+<div id="{{ conf.locationpicker_id}}"></div>
+
+
+<script>
+$('#{{ conf.locationpicker_id }}').locationpicker({
+   location: { latitude: {{latitude.html}}, longitude: {{longitude.html}} },
+   radius: 300
+});
+
+</script>

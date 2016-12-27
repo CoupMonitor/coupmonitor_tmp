@@ -1,0 +1,6 @@
+Django==1.8
+django-bootstrap3==7.1.0
+django-geoposition==0.3.0
+django-hvad==1.6.0
+Pillow==3.4.2
+psycopg2==2.6.1
